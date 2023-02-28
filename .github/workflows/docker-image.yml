@@ -31,9 +31,7 @@ jobs:
         # https://github.com/marketplace/actions/get-version
       - name: Get release version
         id: get_version
-        uses: johngeorgewright/parse-version-action@v1
-        with:
-          ref: ${{ github.ref }}
+        uses: reloc8/action-latest-release-version@1.0.0
 
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
