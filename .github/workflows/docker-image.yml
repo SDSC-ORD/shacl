@@ -31,17 +31,9 @@ jobs:
         # https://github.com/marketplace/actions/get-version
       - name: Get release version
         id: get_version
-        uses: battila7/get-version-action@v2
-      - run: echo ${{ steps.get_version.outputs.version }}
-        
-        #https://github.com/marketplace/actions/docker-metadata-action
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@v4
+        uses: johngeorgewright/parse-version-action@v1
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          tags: |
-            type=raw,value=${{ steps.get_version.outputs.version }}
+          ref: ${{ github.ref }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
