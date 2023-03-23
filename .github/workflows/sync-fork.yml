@@ -1,9 +1,8 @@
 name: Sync Fork
 
 on:
-    workflow_dispatch
-#   schedule:
-#     - cron: '0 0 */3 * *'  # runs at midnight every 3 days     
+  schedule:
+    - cron: '0 0 */3 * *'  # runs at midnight every 3 days     
 
 jobs:
   sync:
@@ -15,7 +14,7 @@ jobs:
         with:
           owner: SDSC-ORD
           base: master
-          head: rmfranken:master
+          head: TopQuadrant:master
           ignore_fail: true
           retries: 1
           retry_after: 15
@@ -27,7 +26,7 @@ jobs:
      - name: Checkout repository
        uses: actions/checkout@v3
        with:
-          repository: 'rmfranken/shacl-upstream'
+          repository: 'TopQuadrant/shacl'
           
      - name: Get Version Tag
        id: get_version_tag
