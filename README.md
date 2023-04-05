@@ -87,26 +87,26 @@ The tools print the validation report or the inferences graph to the output scre
 The `Dockerfile` in the `.docker` folder includes a minimal Java Runtime Environment for the SHACL API that clocks in at 144Mb. To get the latest release of the image use:
 
 ```
-docker pull ghcr.io/SDSC-ORD/shacl:1.4.2
+docker pull ghcr.io/sdsc-ord/shacl:1.4.2_09e93ff
 ```
 
 To use the Docker image, there are two possible commands. To run the validator:
 
 ```
-docker run --rm -v /path/to/data:/data ghcr.io/SDSC-ORD/shacl:1.4.2 validate -datafile /data/myfile.ttl -shapesfile /data/myshapes.ttl
+docker run --rm -v /path/to/data:/data ghcr.io/sdsc-ord/shacl:1.4.2_09e93ff validate -datafile /data/myfile.ttl -shapesfile /data/myshapes.ttl
 ```
 
 To run rule inferencing:
 
 ```
-docker run --rm -v /path/to/data:/data ghcr.io/SDSC-ORD/shacl:1.4.2 infer -datafile /data/myfile.ttl -shapesfile /data/myshapes.ttl
+docker run --rm -v /path/to/data:/data ghcr.io/sdsc-ord/shacl:1.4.2_09e93ff infer -datafile /data/myfile.ttl -shapesfile /data/myshapes.ttl
 ```
 
-Any other command after `ghcr.io/SDSC-ORD/shacl:1.4.2` will print the following help page:
+Any other command after `ghcr.io/sdsc-ord/shacl:1.4.2_09e93ff` will print the following help page:
 
 ```
 Please use this docker image as follows:
-docker run -v /path/to/data:/data ghcr.io/SDSC-ORD/shacl:1.4.2 [COMMAND] [PARAMETERS]
+docker run -v /path/to/data:/data ghcr.io/sdsc-ord/shacl:1.4.2_09e93ff [COMMAND] [PARAMETERS]
 COMMAND:
 	validate 
 		to run validation
@@ -122,5 +122,5 @@ PARAMETERS:
 If you'd like to build the image locally, use:
 
 ```
-docker build -f .docker/Dockerfile -t ghcr.io/SDSC-ORD/shacl:1.4.2 --build-arg VERSION=1.4.2 .
+docker build -f .docker/Dockerfile -t ghcr.io/sdsc-ord/shacl:1.4.2_09e93ff --build-arg VERSION=1.4.2 .
 ```
