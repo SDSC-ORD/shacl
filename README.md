@@ -122,5 +122,5 @@ PARAMETERS:
 If you'd like to build the image locally, use:
 
 ```
-docker build -f .docker/Dockerfile -t ghcr.io/sdsc-ord/shacl:1.4.2_09e93ff --build-arg VERSION=1.4.2 .
+docker build -f .docker/Dockerfile -t ghcr.io/sdsc-ord/shacl:latest --build-arg VERSION=1.4.2 .
 ```
