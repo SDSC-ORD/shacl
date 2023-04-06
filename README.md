@@ -93,7 +93,7 @@ docker pull ghcr.io/sdsc-ord/shacl:latest
 To use the Docker image, there are two possible commands. To run the validator:
 
 ```
-docker run --rm -v /path/to/data:/data ghcr.io/sdsc-ord/shacl:1.4.2_09e93ff validate -datafile /data/myfile.ttl -shapesfile /data/myshapes.ttl
+docker run --rm -v /path/to/data:/data ghcr.io/sdsc-ord/shacl:latest validate -datafile /data/myfile.ttl -shapesfile /data/myshapes.ttl
 ```
 
 To run rule inferencing:
