@@ -99,7 +99,7 @@ docker run --rm -v /path/to/data:/data ghcr.io/sdsc-ord/shacl:latest validate -d
 To run rule inferencing:
 
 ```
-docker run --rm -v /path/to/data:/data ghcr.io/sdsc-ord/shacl:1.4.2_09e93ff infer -datafile /data/myfile.ttl -shapesfile /data/myshapes.ttl
+docker run --rm -v /path/to/data:/data ghcr.io/sdsc-ord/shacl:latest infer -datafile /data/myfile.ttl -shapesfile /data/myshapes.ttl
 ```
 
 Any other command after `ghcr.io/sdsc-ord/shacl:latest` will print the following help page:
