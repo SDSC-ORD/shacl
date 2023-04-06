@@ -106,7 +106,7 @@ Any other command after `ghcr.io/sdsc-ord/shacl:1.4.2_09e93ff` will print the fo
 
 ```
 Please use this docker image as follows:
-docker run -v /path/to/data:/data ghcr.io/sdsc-ord/shacl:1.4.2_09e93ff [COMMAND] [PARAMETERS]
+docker run -v /path/to/data:/data ghcr.io/sdsc-ord/shacl:latest [COMMAND] [PARAMETERS]
 COMMAND:
 	validate 
 		to run validation
