@@ -87,7 +87,7 @@ The tools print the validation report or the inferences graph to the output scre
 The `Dockerfile` in the `.docker` folder includes a minimal Java Runtime Environment for the SHACL API that clocks in at 144Mb. To get the latest release of the image use:
 
 ```
-docker pull ghcr.io/sdsc-ord/shacl:1.4.2_09e93ff
+docker pull ghcr.io/sdsc-ord/shacl:latest
 ```
 > :warning: It is generally better to used a fixed version of the docker image, rather than the `latest` tag. Consult the [package page](https://github.com/SDSC-ORD/shacl/pkgs/container/shacl) find what versions are available.
 To use the Docker image, there are two possible commands. To run the validator:
